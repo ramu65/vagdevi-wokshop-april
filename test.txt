@@ -2,3 +2,4 @@ adding a new line
 adding 2nd line
 
 adding 3rd line with space
+adding 4th line
