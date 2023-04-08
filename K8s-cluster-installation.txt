@@ -1,0 +1,21 @@
+
+To Install Kubectl
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.7/2023-03-17/bin/linux/amd64/kubectl
+chmod +x kubectl
+mv kubectl /usr/local/bin
+
+Install eksctl
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C .
+ mv eksctl /usr/local/bin
+
+IAM Roles
+Select below Policies 
+
+eksctl create cluster --name k8s-jenkins --region us-east-1 --node-type t2.small
+
+delete cluster
+eksctl delete cluster k8s-jenkins --region us-east-1
+
+
+AKIARN7LXKTTRPPUWIYB
+KWalx7RUd6TJ/eEMlqvb/4qCtx2OQZvonpCi/Or9

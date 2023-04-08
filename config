@@ -1,0 +1,32 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EUXdPREF6TlRVMU9Wb1hEVE16TURRd05UQXpOVFUxT1Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTmFuCnlQNis4ZzQ1Z2lCVGZJeWwrcllJcHdEMXllUlozTzVUUHljUGx5V2pGZDBJUml3dTdTa2UrYjBQQ2prVktZVEYKUUMxYm53dnpMR1NkZFg1NFkxU2NFOVloQ2piak1DRklIV21GQ2FPd1N1UGhScVBrQmZpYTFKTjgvbzd0V20vTgp3U3AydmhOY3ZkM3I3b2orV1FTVUhOYjd5ckVJUmhqZnZnQW9zcUFBZCsrYzlXc3FFczJUcmlNaGFBRWNZZ1RNCklOeXZETWRqb012SVRQZzR2NmtNNVdFMmppSDM2QUlmWCtRYk9XUVdmV3o3RTMvSXdOZjZySktKWFBHSlhSY3UKc3Z3Mk5pekRQTjB1MFN3QnRQTWZTT3Q3UXgzaWUyZlNlU2JGWFhJRjdUSHBsdWJNMlRYNVI4SFp1SUEvT3dmbwpzcjNUVmkxb1BhQ0dSYjZBdm1NQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZFVUx4SFZyTzlrYVBOWmt5Zm1tTFFNZktaRHhNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBS2MvdEZHVXMwcjlNVHRTL3NMUQphQUZlWXd6c3FFbmJURVcxUll2ckx2eFRTTjg2UHFrcG8xMWZXNjJhV3lvQ1NDZHFPYWJRWXp1WGZUanlZbGNiClJGYlk4SzFNVXFkN1NkZXRiYkZoUjBmUlBtVlUzZlVHNklvbXYvTVp0TDZtTmRKL2Fqa0J6Uktoc2cyTzEwcnEKWDdPV09tc3VReTlXdHlnZUY4UlI4b2Q0S1l1bmQvbTM5MHA4cFkyNVp3MU5OM1BiaDh0TWVUa0ZBY3R6algxRQovSGp3LzNjOWNUNnYzMEV2ckQ5ZU9HNGFId0w4Yit0WTZsUVZEWEs4ZXBWbzVyWVN5WUpKMFlzQmdUdldsZm5BCmQzdVY1ZVUzMEdiZS9zUjFabmRBUzJ2eU9FekZ6RlRLNzlZL3dCNTA5QjFHUDhVVUNJMElpVGJOQzg2TlVadE0KNXJjPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://AE19EF927E7784EAFE3327C57496EFD4.gr7.us-east-1.eks.amazonaws.com
+  name: k8s-jenkins.us-east-1.eksctl.io
+contexts:
+- context:
+    cluster: k8s-jenkins.us-east-1.eksctl.io
+    user: i-0838d47f9866ac112@k8s-jenkins.us-east-1.eksctl.io
+  name: i-0838d47f9866ac112@k8s-jenkins.us-east-1.eksctl.io
+current-context: i-0838d47f9866ac112@k8s-jenkins.us-east-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: i-0838d47f9866ac112@k8s-jenkins.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --cluster-name
+      - k8s-jenkins
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
+
